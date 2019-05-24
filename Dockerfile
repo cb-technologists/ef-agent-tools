@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 LABEL maintainer "jhendrick@cloudbees.com"
 
 RUN apt-get update \
-    && apt-get -y install curl less vim wget
+    && apt-get -y install curl less vim wget telnet
 
 COPY ElectricFlowAgent-x64-9.0.1.136311 /tmp/ElectricFlowAgent-x64-9.0.1.136311
 COPY install-letsencrypt-in-jdk.sh /tmp/install-letsencrypt-in-jdk.sh
