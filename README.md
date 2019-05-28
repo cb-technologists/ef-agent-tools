@@ -6,3 +6,5 @@ Reference: http://docs.electric-cloud.com/eflow_doc/8_1/Install/Mobile/Basic/Con
 
 
 docker build -t  darinpope/ef-tools:9.0.1.136311 .
+
+ectool --debug 1 --timeout 5 --server ps9.ecloud-kdemo.com login dpope pic34080
