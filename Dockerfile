@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 LABEL maintainer "jhendrick@cloudbees.com"
 
 RUN apt-get update \
-    && apt-get -y install curl less vim wget telnet
+    && apt-get -y install curl less vim wget netbase
 
 COPY ElectricFlowAgent-x64-9.0.1.136311 /tmp/ElectricFlowAgent-x64-9.0.1.136311
 COPY install-letsencrypt-in-jdk.sh /tmp/install-letsencrypt-in-jdk.sh
@@ -20,3 +20,4 @@ RUN chmod +x /tmp/ElectricFlowAgent-x64-9.0.1.136311 \
 ENV COMMANDER_HOME=/opt/electriccloud/electriccommander
 ENV COMMANDER_DATA=/opt/electriccloud/data
 ENV PATH=$COMMANDER_HOME/bin:$PATH
+ENV LD_LIBRARY_PATH=$COMMANDER_HOME/lib
